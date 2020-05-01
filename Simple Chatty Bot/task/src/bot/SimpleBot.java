@@ -11,13 +11,22 @@ public class SimpleBot {
         System.out.println("Please, remind me your name.");
 
         // reading a name
+        String yourName = scanner.next();
 
-        System.out.println("What a great name you have, {yourName}!");
+        System.out.println("What a great name you have, " + yourName + "!");
         System.out.println("Let me guess your age.");
         System.out.println("Enter remainders of dividing your age by 3, 5 and 7.");
 
         // reading all remainders
+        
+        //String[] ageStrArr = ageString.split(" ");
+        String[] ageStrArr = new String[3];
+        ageStrArr[0] = scanner.next();
+        ageStrArr[1] = scanner.next();
+        ageStrArr[2] = scanner.next();
 
-        System.out.println("Your age is {yourAge}; that's a good time to start programming!");
+        int age = (Integer.parseInt(ageStrArr[0]) * 70 + Integer.parseInt(ageStrArr[1]) * 21 + Integer.parseInt(ageStrArr[2]) * 15) % 105;
+
+        System.out.println("Your age is " + age + "; that's a good time to start programming!");
     }
 }
